@@ -1,0 +1,209 @@
+/* RESET */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background: #d9d9d9;
+}
+
+/* HEADER LAYOUT */
+header {
+    width: 100%;
+    padding: 20px 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* LOGO + TEXT */
+.logo-container {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.logo-img {
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.logo-text {
+    font-size: 35px;
+    font-weight: bold;
+    color: #0f392e;
+}
+
+/* NAVIGATION BOX (ROUNDED RECTANGLE) */
+.nav-box {
+    background: #19362f;
+    padding: 12px 25px;
+    border-radius: 35px;
+    box-shadow: 0px 4px 12px rgba(0,0,0,0.12);
+}
+
+.nav-box ul {
+    display: flex;
+    list-style: none;
+    gap: 25px;
+}
+
+.nav-box ul li a {
+    color: white;
+    text-decoration: none;
+    padding: 8px 15px;
+    border-radius: 20px;
+    transition: 0.3s;
+}
+
+.nav-box ul li a:hover {
+    background: #3fa88a;
+}
+
+
+/* MAIN TITLE */
+.main-title {
+    text-align: center;
+    padding: 40px 0;
+}
+
+.main-title h1 {
+    font-size: 40px;
+    color: #000;
+}
+
+/* CARDS */
+/* ---- Alternating grid for cards ---- */
+.cards {
+    width: 90%;
+    max-width: 1100px;
+    margin: 30px auto;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+/* Each card is a flexible row on wide screens, column on small screens */
+.card {
+    background: #3f5666;
+    padding: 20px;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column; /* mobile: stack */
+    align-items: center;
+    gap: 20px;
+    transition: transform .25s ease, background .25s ease;
+    overflow: hidden;
+}
+
+/* hover behaviour */
+.card:hover {
+    transform: translateY(-6px);
+    background: #496474;
+}
+
+/* image and heading sizing for mobile */
+.card img {
+    width: 100%;
+    height: auto;
+    border-radius: 12px;
+    object-fit: cover;
+}
+
+.card h2 {
+    font-size: 24px;
+    color: #000;
+    text-align: center;
+    margin-top: 6px;
+}
+
+/* ---- Desktop / wider screens: alternate layout ---- */
+@media (min-width: 850px) {
+    .cards {
+        gap: 34px;
+    }
+
+    .card {
+        flex-direction: row; /* default: image left, text right */
+        align-items: center;
+        padding: 22px;
+    }
+
+    /* Make image and text take equal space */
+    .card img {
+        width: 50%;
+        border-radius: 15px;
+    }
+
+    .card h2 {
+        width: 50%;
+        text-align: left;
+        font-size: 50px;
+        padding: 0 20px;
+        color: #000;
+    }
+
+    /* Alternate the direction for even cards (2nd, 4th, ...) */
+    .card:nth-child(even) {
+        flex-direction: row-reverse; /* image on right, text on left */
+    }
+
+    /* Center heading vertically */
+    .card h2 {
+        display: flex;
+        align-items: center;
+    }
+}
+
+
+/* FOOTER */
+footer {
+    background: #203742;
+    padding: 30px 40px;
+    margin-top: 40px;
+    color: white;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.footer-box {
+    width: 30%;
+}
+
+.footer-box input {
+    width: 100%;
+    padding: 8px;
+    margin-top: 5px;
+    border: none;
+    border-radius: 5px;
+}
+
+.footer-box button {
+    margin-top: 10px;
+    padding: 8px 15px;
+    border: none;
+    background: #16272f;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.footer-box button:hover {
+    background: #39cbb0;
+}
+
+.footer-bottom {
+    text-align: center;
+    padding: 15px;
+    background: #16272f;
+    color: white;
+}
