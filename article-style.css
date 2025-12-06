@@ -1,0 +1,145 @@
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background: #d6e1e7;
+}
+
+/* HEADER */
+header {
+    width: 100%;
+    padding: 20px 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* LOGO + TEXT */
+.logo-container {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.logo-img {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.logo-text {
+    font-size: 35px;
+    font-weight: bold;
+    color: #0f392e;
+}
+
+/* NAVIGATION BOX (ROUNDED RECTANGLE) */
+.nav-box {
+    background: #19362f;
+    padding: 12px 25px;
+    border-radius: 35px;
+    box-shadow: 0px 4px 12px rgba(0,0,0,0.12);
+}
+
+.nav-box ul {
+    display: flex;
+    list-style: none;
+    gap: 25px;
+}
+
+.nav-box ul li a {
+    color: white;
+    text-decoration: none;
+    padding: 8px 15px;
+    border-radius: 20px;
+    transition: 0.3s;
+}
+
+.nav-box ul li a:hover {
+    background: #3fa88a;
+}
+
+/* PAGE TITLE */
+.page-title {
+    text-align: center;
+    margin-top: 30px;
+    font-size: 40px;
+}
+
+/* MAIN CONTENT */
+.content-wrapper {
+    padding: 40px 60px;
+    display: grid;
+    grid-template-columns: 1fr 5px 1fr;
+    gap: 20px;
+    text-align: justify;
+    text-justify: inter-word;
+}
+
+.content-box {
+    background: #b4c4cc;
+    padding: 25px;
+    border-radius: 20px;
+    font-size: 15px;
+    line-height: 1.5;
+}
+
+/* Divider */
+.divider {
+    width: 3px;
+    background: black;
+    border-radius: 10px;
+}
+
+/* FOOTER */
+footer {
+    background: #203742;
+    padding: 30px 40px;
+    margin-top: 40px;
+    color: white;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.footer-box {
+    width: 30%;
+}
+
+.footer-box input {
+    width: 100%;
+    padding: 8px;
+    margin-top: 5px;
+    border: none;
+    border-radius: 5px;
+}
+
+.footer-box button {
+    margin-top: 10px;
+    padding: 8px 15px;
+    border: none;
+    background: #16272f;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.footer-box button:hover {
+    background: #39cbb0;
+}
+
+.footer-bottom {
+    text-align: center;
+    padding: 15px;
+    background: #16272f;
+    color: white;
+}
